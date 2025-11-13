@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseDeDatos {
-    // Simula la base de datos con una lista de productos
+    
     private List<Producto> productos;
 
     public BaseDeDatos() {
@@ -14,7 +14,7 @@ public class BaseDeDatos {
         this.productos.add(new Producto("Mouse Inalámbrico", "M002", 50, 25.99));
     }
 
-    // Lógica de Negocio
+    
     
     /**
      * Añade un Producto a la lista.
