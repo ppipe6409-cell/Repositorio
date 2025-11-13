@@ -17,9 +17,9 @@ public class InventarioVista {
     public int mostrarMenu() {
         System.out.println("\n--- Menú de Gestión de Inventario ---");
         System.out.println("1. Agregar un nuevo producto");
-        System.out.println("2. Buscar un producto por ID"); // ¡Cambiado a ID!
+        System.out.println("2. Buscar un producto por ID"); 
         System.out.println("3. Mostrar todos los productos");
-        System.out.println("4. Eliminar un producto por ID"); // ¡Cambiado a ID!
+        System.out.println("4. Eliminar un producto por ID");
         System.out.println("5. Salir");
         System.out.print("Selecciona una opción: ");
 
