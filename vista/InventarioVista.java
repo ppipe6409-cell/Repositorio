@@ -13,9 +13,7 @@ public class InventarioVista {
         this.scanner = new Scanner(System.in);
     }
 
-    /**
-     * Imprime el menú de 5 opciones y retorna la opción seleccionada.
-     */
+    
     public int mostrarMenu() {
         System.out.println("\n--- Menú de Gestión de Inventario ---");
         System.out.println("1. Agregar un nuevo producto");
@@ -35,16 +33,14 @@ public class InventarioVista {
         }
     }
 
-    /**
-     * Solicita al usuario los datos para crear un Producto.
-     */
+    
     public Producto pedirDatosUsuario() {
         System.out.println("\n--- Agregar Nuevo Producto ---");
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
 
         System.out.print("ID (Identificador Único): "); // ¡Cambiado a ID!
-        String id = scanner.nextLine(); // ¡Cambiado a ID!
+        String id = scanner.nextLine();
 
         // ... (código para cantidad y precio sin cambios)
         int cantidad = -1;
