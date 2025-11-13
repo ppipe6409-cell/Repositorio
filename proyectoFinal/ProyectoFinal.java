@@ -3,7 +3,7 @@ import controlador.ControladorInventario;
 import modelo.BaseDeDatos;
 import vista.InventarioVista;
 
-// Clase principal que contiene el método main
+
 public class ProyectoFinal {
     
     public static void main(String[] args) {
