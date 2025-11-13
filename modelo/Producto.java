@@ -1,7 +1,7 @@
 package modelo;
 
 public class Producto {
-    // Atributos privados
+    
     private String nombre;
     private String id; // ¡Cambiado de SKU a ID!
     private int cantidad;
