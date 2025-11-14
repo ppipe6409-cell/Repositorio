@@ -17,10 +17,9 @@ public class BaseDeDatos {
     
     
     /**
-     * Añade un Producto a la lista.
-     * @param producto El Producto a agregar.
-     * @return true si se agrega correctamente.
-     */
+    
+     * @param producto 
+     * @return true si se a
     public boolean agregarProducto(Producto producto) {
         if (producto == null) return false;
         // Se asume que el ID no se repite para este ejercicio simple.
@@ -35,15 +34,15 @@ public class BaseDeDatos {
     public Producto buscarProductoId(String id) { // ¡Cambiado a buscarProductoId!
         if (id == null || id.isEmpty()) return null;
         
-        // Búsqueda por ID
+        
         return productos.stream()
-                .filter(p -> p.getId().equalsIgnoreCase(id)) // ¡Usando getId!
+                .filter(p -> p.getId().equalsIgnoreCase(id)) 
                 .findFirst()
                 .orElse(null); 
     }
 
     /**
-     * Retorna una lista completa de productos.
+     
      * @return Una lista de Producto.
      */
     public List<Producto> buscarTodos() {
