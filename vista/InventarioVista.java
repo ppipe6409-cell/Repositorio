@@ -39,10 +39,10 @@ public class InventarioVista {
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
 
-        System.out.print("ID (Identificador Único): "); // ¡Cambiado a ID!
+        System.out.print("ID (Identificador Único): ");
         String id = scanner.nextLine();
 
-        // ... (código para cantidad y precio sin cambios)
+        
         int cantidad = -1;
         while (cantidad < 0) {
             try {
@@ -72,9 +72,9 @@ public class InventarioVista {
     
     /**
      * Solicita al usuario que ingrese un ID.
-     * @return El String del ID ingresado.
+     * @return 
      */
-    public String pedirId() { // ¡Cambiado a pedirId!
+    public String pedirId() { 
         System.out.print("\nIngrese el ID del producto a buscar/eliminar: "); // ¡Cambiado a ID!
         return scanner.nextLine();
     }
@@ -91,7 +91,7 @@ public class InventarioVista {
         }
     }
 
-    // ... (mostrarProductos y mostrarMensaje sin cambios)
+    
     public void mostrarProductos(List<Producto> productos) {
         if (productos.isEmpty()) {
             mostrarMensaje("No hay productos registrados.");
