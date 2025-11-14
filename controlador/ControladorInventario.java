@@ -36,7 +36,7 @@ public class ControladorInventario {
                     break;
                 case 2: // Buscar
                     String idBuscar = vista.pedirId(); // ¡Cambiado a pedirId!
-                    Producto productoEncontrado = modelo.buscarProductoId(idBuscar); // ¡Cambiado a buscarProductoId!
+                    Producto productoEncontrado = modelo.buscarProductoId(idBuscar); 
                     vista.mostrarProducto(productoEncontrado); 
                     break;
                 case 3: // Mostrar todos
@@ -45,7 +45,7 @@ public class ControladorInventario {
                 case 4: // Eliminar
                     String idEliminar = vista.pedirId(); // ¡Cambiado a pedirId!
                     if (modelo.eliminarProducto(idEliminar)) { // ¡Cambiado a eliminarProducto(id)!
-                        vista.mostrarMensaje("Producto con ID " + idEliminar + " eliminado correctamente."); // ¡Cambiado a ID!
+                        vista.mostrarMensaje("Producto con ID " + idEliminar + " eliminado correctamente."); 
                     } else {
                         vista.mostrarMensaje("Error: Producto con ID " + idEliminar + " no encontrado o no se pudo eliminar."); // ¡Cambiado a ID!
                     }
