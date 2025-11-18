@@ -3,7 +3,7 @@ package modelo;
 public class Producto {
     
     private String nombre;
-    private String id; // ¡pasar cambiossssssssssssssssss
+    private String id; // ¡pasar cambiosssssssssss con merge
     private int cantidad;
     private double precio;
 
