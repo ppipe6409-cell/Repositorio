@@ -3,7 +3,7 @@ package modelo;
 public class Producto {
     
     private String nombre;
-    private String id; // ¡Cambiado de SKU a ID!
+    private String id; // ¡pasar cambiossssssssssssssssss
     private int cantidad;
     private double precio;
 
