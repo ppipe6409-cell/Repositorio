@@ -36,7 +36,7 @@ public class ControladorInventario {
                     break;
                 case 2: // Buscar
                     String idBuscar = vista.pedirId(); // ¡Cambiado a pedirId!
-                    Producto productoEncontrado = modelo.buscarProductoId(idBuscar); // ¡Cambiado a buscarProductoId!
+                    Producto productoEncontrado = modelo.buscarProductoId(idBuscar); 
                     vista.mostrarProducto(productoEncontrado); 
                     break;
                 case 3: // Mostrar todos
