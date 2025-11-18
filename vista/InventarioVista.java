@@ -7,21 +7,19 @@ import java.util.Scanner;
 import modelo.Producto;
 
 public class InventarioVista {
+
     private Scanner scanner;
 
     public InventarioVista() {
-        this.scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
-    /**
-     * Imprime el menú de 5 opciones y retorna la opción seleccionada.
-     */
     public int mostrarMenu() {
         System.out.println("\n--- Menú de Gestión de Inventario ---");
         System.out.println("1. Agregar un nuevo producto");
-        System.out.println("2. Buscar un producto por ID"); // ¡Cambiado a ID!
+        System.out.println("2. Buscar un producto por ID");
         System.out.println("3. Mostrar todos los productos");
-        System.out.println("4. Eliminar un producto por ID"); // ¡Cambiado a ID!
+        System.out.println("4. Eliminar un producto por ID");
         System.out.println("5. Salir");
         System.out.print("Selecciona una opción: ");
 
@@ -35,75 +33,62 @@ public class InventarioVista {
         }
     }
 
-    /**
-     * Solicita al usuario los datos para crear un Producto.
-     */
     public Producto pedirDatosUsuario() {
         System.out.println("\n--- Agregar Nuevo Producto ---");
+
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
 
-        System.out.print("ID (Identificador Único): "); // ¡Cambiado a ID!
-        String id = scanner.nextLine(); // ¡Cambiado a ID!
+        System.out.print("ID del producto: ");
+        String id = scanner.nextLine();
 
-        // ... (código para cantidad y precio sin cambios)
         int cantidad = -1;
         while (cantidad < 0) {
             try {
-                System.out.print("Cantidad (entero): ");
+                System.out.print("Cantidad: ");
                 cantidad = scanner.nextInt();
-                scanner.nextLine(); 
+                scanner.nextLine();
             } catch (InputMismatchException e) {
-                System.out.println("Error: La cantidad debe ser un número entero.");
+                System.out.println("Error: debe ser un número entero.");
                 scanner.nextLine();
             }
         }
 
-        double precio = -1.0;
-        while (precio < 0.0) {
-             try {
-                System.out.print("Precio Unitario (decimal): ");
+        double precio = -1;
+        while (precio < 0) {
+            try {
+                System.out.print("Precio Unitario: ");
                 precio = scanner.nextDouble();
                 scanner.nextLine();
             } catch (InputMismatchException e) {
-                System.out.println("Error: El precio debe ser un número decimal.");
+                System.out.println("Error: debe ser un número decimal.");
                 scanner.nextLine();
             }
         }
-        
-        return new Producto(nombre, id, cantidad, precio); // ¡Pasando ID!
+
+        return new Producto(nombre, id, cantidad, precio);
     }
-    
-    /**
-     * Solicita al usuario que ingrese un ID.
-     * @return El String del ID ingresado.
-     */
-    public String pedirId() { // ¡Cambiado a pedirId!
-        System.out.print("\nIngrese el ID del producto a buscar/eliminar: "); // ¡Cambiado a ID!
+
+    public String pedirId() {
+        System.out.print("\nIngrese el ID: ");
         return scanner.nextLine();
     }
-    
-    /**
-     * Muestra la información de un producto.
-     */
+
     public void mostrarProducto(Producto producto) {
         if (producto == null) {
             mostrarMensaje("Producto no encontrado.");
         } else {
             System.out.println("\n--- Producto Encontrado ---");
-            System.out.println(producto.toString());
+            System.out.println(producto);
         }
     }
 
-    // ... (mostrarProductos y mostrarMensaje sin cambios)
     public void mostrarProductos(List<Producto> productos) {
         if (productos.isEmpty()) {
             mostrarMensaje("No hay productos registrados.");
         } else {
             System.out.println("\n--- Lista de Todos los Productos ---");
-            for (Producto p : productos) {
-                System.out.println(p.toString());
-            }
+            productos.forEach(p -> System.out.println(p));
         }
     }
 

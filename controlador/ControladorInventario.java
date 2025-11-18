@@ -45,7 +45,7 @@ public class ControladorInventario {
                 case 4: // Eliminar
                     String idEliminar = vista.pedirId(); // ¡Cambiado a pedirId!
                     if (modelo.eliminarProducto(idEliminar)) { // ¡Cambiado a eliminarProducto(id)!
-                        vista.mostrarMensaje("Producto con ID " + idEliminar + " eliminado correctamente."); 
+                        vista.mostrarMensaje("Producto con ID " + idEliminar + " eliminado correctamente."); // ¡Cambiado a ID!
                     } else {
                         vista.mostrarMensaje("Error: Producto con ID " + idEliminar + " no encontrado o no se pudo eliminar."); // ¡Cambiado a ID!
                     }
