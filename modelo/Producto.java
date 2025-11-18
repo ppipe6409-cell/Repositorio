@@ -3,7 +3,7 @@ package modelo;
 public class Producto {
     
     private String nombre;
-    private String id;
+    private String id;     //cambios ricoche
     private int cantidad;
     private double precio;
     private String color;
